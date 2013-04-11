@@ -1,0 +1,13 @@
+{% extends 'layouts/frontend.html' %}
+
+{% block container %}
+<div id="login">
+    <fieldset>
+        <legend>Login</legend>
+        
+        {% for connection in connections %}
+            <a href="{{ connections[connection].authorize_url }}">{{ connection }}</a>
+        {% endfor %}
+    </fieldset>
+</div>
+{% endblock %}
